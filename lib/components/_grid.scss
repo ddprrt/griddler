@@ -17,6 +17,10 @@
 	@media (min-width: $screen-lg-min) {
 		width: $container-lg;
 	}
+
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
 }
 
 // mobile first defaults
@@ -48,9 +52,9 @@
 
 @include make-grid-columns-float(xs);
 @include make-grid($grid-columns, xs, width);
-@include make-grid($grid-columns, xs, pull);
-@include make-grid($grid-columns, xs, push);
-@include make-grid($grid-columns, xs, offset);
+@if($use-puller) { @include make-grid($grid-columns, xs, pull); }
+@if($use-pusher) { @include make-grid($grid-columns, xs, push); }
+@if($use-offset) { @include make-grid($grid-columns, xs, offset); }
 
 
 // Small grid
@@ -64,9 +68,9 @@
 @media (min-width: $screen-sm-min) {
 	@include make-grid-columns-float(sm);
 	@include make-grid($grid-columns, sm, width);
-	@include make-grid($grid-columns, sm, pull);
-	@include make-grid($grid-columns, sm, push);
-	@include make-grid($grid-columns, sm, offset);
+	@if($use-puller) { @include make-grid($grid-columns, sm, pull); }
+	@if($use-pusher) { @include make-grid($grid-columns, sm, push); }
+	@if($use-offset) { @include make-grid($grid-columns, sm, offset); }
 }
 
 
@@ -80,9 +84,9 @@
 @media (min-width: $screen-md-min) {
 	@include make-grid-columns-float(md);
 	@include make-grid($grid-columns, md, width);
-	@include make-grid($grid-columns, md, pull);
-	@include make-grid($grid-columns, md, push);
-	@include make-grid($grid-columns, md, offset);
+	@if($use-puller) { @include make-grid($grid-columns, md, pull); }
+	@if($use-pusher) { @include make-grid($grid-columns, md, push); }
+	@if($use-offset) { @include make-grid($grid-columns, md, offset); }
 }
 
 
@@ -94,14 +98,10 @@
 // it's full-width.
 
 @media (min-width: $screen-lg-min) {
-	.container {
-		width: $container-lg;
-	}
-
 	@include make-grid-columns-float(lg);
 	@include make-grid($grid-columns, lg, width);
-	@include make-grid($grid-columns, lg, pull);
-	@include make-grid($grid-columns, lg, push);
-	@include make-grid($grid-columns, lg, offset);
+	@if($use-puller) { @include make-grid($grid-columns, lg, pull); }
+	@if($use-pusher) { @include make-grid($grid-columns, lg, push); }
+	@if($use-offset) { @include make-grid($grid-columns, lg, offset); }
 }
 

@@ -20,6 +20,10 @@
 	}
 }
 
+%clearfix {
+	@include clearfix();
+}
+
 // Grid System
 // -----------
 
@@ -29,14 +33,14 @@
 	margin-left: auto;
 	padding-left:  ($grid-gutter-width / 2);
 	padding-right: ($grid-gutter-width / 2);
-	@include clearfix();
+	@extend %clearfix;
 }
 
 // Creates a wrapper for a series of columns
 @mixin make-row($gutter: $grid-gutter-width) {
 	margin-left:  ($gutter / -2);
 	margin-right: ($gutter / -2);
-	@include clearfix();
+	@extend %clearfix;
 }
 
 // Generate the extra small columns
