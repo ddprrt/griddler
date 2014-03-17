@@ -1,3 +1,11 @@
+// Global switches
+// --------------------------------------------------
+// Use silent classes instead of normal ones, to use with extend
+$use-silent:                   false !default;
+$use-pusher:                   true !default;
+$use-puller:                   true !default;
+$use-offset:                   true !default;
+
 // Media queries breakpoints
 // --------------------------------------------------
 
@@ -55,6 +63,3 @@ $container-md:                 $container-desktop !default;
 // Large screen / wide desktop
 $container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
 $container-lg:                 $container-large-desktop !default;
-
-// Use silent classes instead of normal ones, to use with extend
-$use-silent:                   false !default;
