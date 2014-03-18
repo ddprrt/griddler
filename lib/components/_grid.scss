@@ -1,0 +1,107 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Set the container width, and override it for fixed navbars in media queries
+%container {
+	@include container-fixed();
+
+	@media (min-width: $screen-sm-min) {
+		width: $container-sm;
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: $container-md;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+}
+
+// mobile first defaults
+%row {
+	@include make-row();
+}
+
+@if($use-silent == false) {
+	.container {
+		@extend %container;	
+	}
+
+	.row {
+		@extend %row;	
+	}
+}
+
+// Common styles for small and large grid columns
+@include make-grid-columns();
+
+
+// Extra small grid
+//
+// Grid classes for extra small devices like smartphones. No offset, push, or
+// pull classes are present here due to the size of the target.
+//
+// Note that `.col-xs-12` doesn't get floated on purpose--there's no need since
+// it's full-width.
+
+@include make-grid-columns-float(xs);
+@include make-grid($grid-columns, xs, width);
+@if($use-puller) { @include make-grid($grid-columns, xs, pull); }
+@if($use-pusher) { @include make-grid($grid-columns, xs, push); }
+@if($use-offset) { @include make-grid($grid-columns, xs, offset); }
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+//
+// Note that `.col-sm-12` doesn't get floated on purpose--there's no need since
+// it's full-width.
+
+@media (min-width: $screen-sm-min) {
+	@include make-grid-columns-float(sm);
+	@include make-grid($grid-columns, sm, width);
+	@if($use-puller) { @include make-grid($grid-columns, sm, pull); }
+	@if($use-pusher) { @include make-grid($grid-columns, sm, push); }
+	@if($use-offset) { @include make-grid($grid-columns, sm, offset); }
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+//
+// Note that `.col-md-12` doesn't get floated on purpose--there's no need since
+// it's full-width.
+
+@media (min-width: $screen-md-min) {
+	@include make-grid-columns-float(md);
+	@include make-grid($grid-columns, md, width);
+	@if($use-puller) { @include make-grid($grid-columns, md, pull); }
+	@if($use-pusher) { @include make-grid($grid-columns, md, push); }
+	@if($use-offset) { @include make-grid($grid-columns, md, offset); }
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+//
+// Note that `.col-lg-12` doesn't get floated on purpose--there's no need since
+// it's full-width.
+
+@media (min-width: $screen-lg-min) {
+	@include make-grid-columns-float(lg);
+	@include make-grid($grid-columns, lg, width);
+	@if($use-puller) { @include make-grid($grid-columns, lg, pull); }
+	@if($use-pusher) { @include make-grid($grid-columns, lg, push); }
+	@if($use-offset) { @include make-grid($grid-columns, lg, offset); }
+}
+
