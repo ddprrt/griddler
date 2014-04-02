@@ -4,38 +4,38 @@
 
 // Set the container width, and override it for fixed navbars in media queries
 %container {
-	@include container-fixed();
+  @include container-fixed();
 
-	@media (min-width: $screen-sm-min) {
-		width: $container-sm;
-	}
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
 
-	@media (min-width: $screen-md-min) {
-		width: $container-md;
-	}
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
 
-	@media (min-width: $screen-lg-min) {
-		width: $container-lg;
-	}
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
 
-	@media (min-width: $screen-lg-min) {
-		width: $container-lg;
-	}
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
 }
 
 // mobile first defaults
 %row {
-	@include make-row();
+  @include make-row();
 }
 
 @if($use-silent == false) {
-	.container {
-		@extend %container;	
-	}
+  .container {
+    @extend %container; 
+  }
 
-	.row {
-		@extend %row;	
-	}
+  .row {
+    @extend %row; 
+  }
 }
 
 // Common styles for small and large grid columns
@@ -66,11 +66,11 @@
 // it's full-width.
 
 @media (min-width: $screen-sm-min) {
-	@include make-grid-columns-float(sm);
-	@include make-grid($grid-columns, sm, width);
-	@if($use-puller) { @include make-grid($grid-columns, sm, pull); }
-	@if($use-pusher) { @include make-grid($grid-columns, sm, push); }
-	@if($use-offset) { @include make-grid($grid-columns, sm, offset); }
+  @include make-grid-columns-float(sm);
+  @include make-grid($grid-columns, sm, width);
+  @if($use-puller) { @include make-grid($grid-columns, sm, pull); }
+  @if($use-pusher) { @include make-grid($grid-columns, sm, push); }
+  @if($use-offset) { @include make-grid($grid-columns, sm, offset); }
 }
 
 
@@ -82,11 +82,11 @@
 // it's full-width.
 
 @media (min-width: $screen-md-min) {
-	@include make-grid-columns-float(md);
-	@include make-grid($grid-columns, md, width);
-	@if($use-puller) { @include make-grid($grid-columns, md, pull); }
-	@if($use-pusher) { @include make-grid($grid-columns, md, push); }
-	@if($use-offset) { @include make-grid($grid-columns, md, offset); }
+  @include make-grid-columns-float(md);
+  @include make-grid($grid-columns, md, width);
+  @if($use-puller) { @include make-grid($grid-columns, md, pull); }
+  @if($use-pusher) { @include make-grid($grid-columns, md, push); }
+  @if($use-offset) { @include make-grid($grid-columns, md, offset); }
 }
 
 
@@ -98,10 +98,10 @@
 // it's full-width.
 
 @media (min-width: $screen-lg-min) {
-	@include make-grid-columns-float(lg);
-	@include make-grid($grid-columns, lg, width);
-	@if($use-puller) { @include make-grid($grid-columns, lg, pull); }
-	@if($use-pusher) { @include make-grid($grid-columns, lg, push); }
-	@if($use-offset) { @include make-grid($grid-columns, lg, offset); }
+  @include make-grid-columns-float(lg);
+  @include make-grid($grid-columns, lg, width);
+  @if($use-puller) { @include make-grid($grid-columns, lg, pull); }
+  @if($use-pusher) { @include make-grid($grid-columns, lg, push); }
+  @if($use-offset) { @include make-grid($grid-columns, lg, offset); }
 }
 
