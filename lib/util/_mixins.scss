@@ -172,16 +172,18 @@
 		padding-right: ($grid-gutter-width / 2);
 	}
 
-	@if($use-silent == false) {
-		$list: '';
-		$i: 1;
-		$list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
-		@for $i from 2 through $grid-columns {
-			$list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, #{$list}";
-		}
-		#{$list} {
-			@extend %grid-column;
-		}
+	$list: '';
+	$i: 1;
+	
+	@if($use-silent) { $list: "%col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}"; }
+	@else { $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}"; }
+
+	@for $i from 2 through $grid-columns {
+		@if($use-silent) { $list: "%col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}, #{$list}"; }
+		@else { $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, #{$list}"; }
+	}
+	#{$list} {
+		@extend %grid-column;
 	}
 }
 
@@ -191,16 +193,19 @@
 	%grid-column-float {
 		float: left;
 	}
-	@if($use-silent == false) {
-		$list: '';
-		$i: 1;
-		$list: ".col-#{$class}-#{$i}";
-		@for $i from 2 through $grid-columns {
-			$list: ".col-#{$class}-#{$i}, #{$list}";
-		}
-		#{$list} {
-			float: left;
-		}
+	
+	$list: '';
+	$i: 1;
+
+	@if($use-silent) { $list: "%col-#{$class}-#{$i}"; }
+	@else { $list: ".col-#{$class}-#{$i}"; }
+	
+	@for $i from 2 through $grid-columns {
+		@if($use-silent) { $list: "%col-#{$class}-#{$i}, #{$list}"; }
+		@else { $list: ".col-#{$class}-#{$i}, #{$list}"; }
+	}
+	#{$list} {
+		float: left;
 	}
 }
 
