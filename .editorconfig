@@ -7,13 +7,5 @@ root = true
 [*]
 end_of_line = lf
 insert_final_newline = true
-
-# Indentation override for all JS under lib directory
-[lib/**.scss]
-indent_style = space
-indent_size = 2
-
-# Matches the exact files either package.json or .travis.yml
-[{package.json,.travis.yml}]
 indent_style = space
 indent_size = 2
