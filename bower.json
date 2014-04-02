@@ -1,0 +1,29 @@
+{
+  "name": "griddler",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ddprrt/griddler",
+  "authors": [
+    "ddprrt <sbaumg@gmail.com>"
+  ],
+  "description": "Griddler - Bootstrap-like grids without the clutter",
+  "main": "lib/_griddler.scss",
+  "keywords": [
+    "grid",
+    "bootstrap",
+    "batman",
+    "sass",
+    "scss",
+    "component",
+    "css3",
+    "mobile",
+    "first"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
