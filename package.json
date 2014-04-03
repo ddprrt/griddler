@@ -1,0 +1,33 @@
+{
+  "name": "griddler",
+  "version": "0.0.1",
+  "description": "Bootstrap-like grids without the clutter",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "~3.6.0",
+    "gulp-sass": "~0.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddprrt/griddler"
+  },
+  "keywords": [
+    "grid",
+    "bootstrap",
+    "css3",
+    "mobile",
+    "first",
+    "batman",
+    "riddler"
+  ],
+  "author": "Stefan Baumgartner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddprrt/griddler/issues"
+  },
+  "homepage": "https://github.com/ddprrt/griddler"
+}
