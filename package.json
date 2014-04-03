@@ -1,6 +1,6 @@
 {
   "name": "griddler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bootstrap-like grids without the clutter",
   "main": "gulpfile.js",
   "dependencies": {
