@@ -5,22 +5,6 @@
 // Set the container width, and override it for fixed navbars in media queries
 %container {
   @include container-fixed();
-
-  @media (min-width: $screen-sm-min) {
-    width: $container-sm;
-  }
-
-  @media (min-width: $screen-md-min) {
-    width: $container-md;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    width: $container-lg;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    width: $container-lg;
-  }
 }
 
 // mobile first defaults
@@ -31,6 +15,22 @@
 @if($use-silent == false) {
   .container {
     @extend %container; 
+      
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+
+    @media (min-width: $screen-md-min) {
+      width: $container-md;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
   }
 
   .row {
