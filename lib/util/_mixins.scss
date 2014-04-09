@@ -33,6 +33,8 @@
   margin-left: auto;
   padding-left:  ($grid-gutter-width / 2);
   padding-right: ($grid-gutter-width / 2);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   @extend %clearfix;
 }
 
@@ -40,6 +42,8 @@
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   @extend %clearfix;
 }
 
@@ -176,7 +180,7 @@
 
   $list: '';
   $i: 1;
-  
+
   @if($use-silent) { $list: "%col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}"; }
   @else { $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}"; }
 
@@ -195,13 +199,13 @@
   %grid-column-float {
     float: left;
   }
-  
+
   $list: '';
   $i: 1;
 
   @if($use-silent) { $list: "%col-#{$class}-#{$i}"; }
   @else { $list: ".col-#{$class}-#{$i}"; }
-  
+
   @for $i from 2 through $grid-columns {
     @if($use-silent) { $list: "%col-#{$class}-#{$i}, #{$list}"; }
     @else { $list: ".col-#{$class}-#{$i}, #{$list}"; }
