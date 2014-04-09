@@ -14,8 +14,8 @@
 
 @if($use-silent == false) {
   .container {
-    @extend %container; 
-      
+    @extend %container;
+
     @media (min-width: $screen-sm-min) {
       width: $container-sm;
     }
@@ -29,8 +29,12 @@
     }
   }
 
+  .container-fluid {
+    @extend %container;
+  }
+
   .row {
-    @extend %row; 
+    @extend %row;
   }
 }
 
@@ -100,4 +104,3 @@
   @if($use-pusher) { @include make-grid($grid-columns, lg, push); }
   @if($use-offset) { @include make-grid($grid-columns, lg, offset); }
 }
-
