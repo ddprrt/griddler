@@ -1,12 +1,16 @@
 'use strict';
 
 var gulp = require('gulp'),
-    sass = require('gulp-sass');
+    sass = require('gulp-ruby-sass'),
+    prefix = require('gulp-autoprefixer'),
+    cssmin = require('gulp-cssmin');
 
 
 gulp.task('griddler-min', function() {
   return gulp.src('src/griddler.scss')
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ style: 'compact', sourcemap: true }))
+    .pipe(prefix('last 1 version', '> 1%', 'ie 8', 'ie 7'))
+    .pipe(cssmin())
     .pipe(gulp.dest('dist'));
 });
 
