@@ -1,4 +1,3 @@
-
 // Clearfix
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 //
@@ -242,7 +241,7 @@
       right: percentage(($index / $grid-columns));
     }
     @if($use-silent == false) {
-      .col-#{$class}-push-#{$index}  {
+      .col-#{$class}-pull-#{$index}  {
         @extend %col-#{$class}-pull-#{$index};
       }
     }
