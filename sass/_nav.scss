@@ -1,11 +1,32 @@
 .main-navigation {
+	overflow: hidden;
+	
+
 	ul {
 		list-style-type: none;
 		margin: 0;
+		float: right;
 		overflow: hidden;
 	}
 
 	li {
 		float: left;
+	}
+
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.nav-link {
+	display: block;
+	color: darken($bgcolor, 10);
+	padding: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	transition: all 0.5s ease;
+
+	&:focus,
+	&:hover {
+		color: white;
+		background-color: $bgcolor;
 	}
 }
