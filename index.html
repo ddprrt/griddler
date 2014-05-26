@@ -26,15 +26,45 @@
 		</div>
 	</header>
 	<article id="why" class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<h1>Why griddler?</h1>	
-				<p>
-					Don't get us wrong: Bootstrap is great on many occassions and CSS developers surely can learn a lot! However, most of the time Bootstrap is used rather 
-				</p>			
-			</div>
-		</div>
-		
+		<h1>Why griddler?</h1>
+		<p>
+			Don't get us wrong: Bootstrap is great on many occassions and CSS developers surely can learn a lot! However, most of the time Bootstrap is used rather foolishly, dropping in tons of CSS in a website whilst needing just a few components, resulting sometimes in 98% of unused CSS code!
+		</p>
+
+		<p>
+			We found out that most of the designers are using Bootstrap just for the sake of the grid system. And we decided to extract that system for an easy-to-use drop-in replacement.
+		</p>
+
+		<p>
+			But <em>griddler</em> does not stop here. You can use either the whole CSS grid at once, or customize it to include just the parts you really, really need.
+		</p>
+		<p>
+			Go ahead and try it out!
+		</p>
+	</article>
+	<article id="getting-started" class="container">
+		<h1>Getting Started!</h1>
+
+		<p>
+			You can either download the CSS file and include <em>griddler</em> in your website. If you are using Sass, it's highly recommended to include our reusable component. Install it with Bower:
+		</p>
+<pre><code>bower install --save griddler
+</code></pre>
+
+		<h2>Optimizing your Output</h2>
+
+		<p>
+			Bootstrap's grid includes a lot of helpers which aren't needed in the most cases. You can push, pull or offset some columns, but most of the time the arrangement is just simple and straightforward. To remove said helper classes, set some flags before including <em>griddler</em>
+		</p>
+<pre><code>$use-offset: false;
+$use-puller: false;
+$use-pusher: false;
+
+@import "../bower_components/griddler/lib/griddler";
+</code></pre>
+		<p>
+			It's also possible to override any of the known variables from Bootsrap. Refer to the <a href="./docs">for more information</a>
+		</p>
 	</article>
 </body>
 </html>

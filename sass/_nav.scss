@@ -1,6 +1,6 @@
 .main-navigation {
-	overflow: hidden;
-	
+	position: relative;
+	z-index: 2;
 
 	ul {
 		list-style-type: none;
@@ -13,7 +13,7 @@
 		float: left;
 	}
 
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .nav-link {

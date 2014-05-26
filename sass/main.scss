@@ -1,3 +1,5 @@
+$container-large-desktop: 970px !default;
+
 @import "../bower_components/normalize-scss/normalize";
 @import "../bower_components/griddler/lib/griddler";
 
@@ -5,6 +7,14 @@ $bgcolor: #83B55B;
 
 p {
 	line-height: 1.4em;
+}
+
+pre {
+	font-size: 0.8em;
+	padding: 15px;
+	background-color: #333;
+	color: #fff;
+	overflow: scroll;
 }
 
 @import "nav";
