@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  gutil  = require('gulp-util'),
   sass   = require('gulp-ruby-sass'),
   cssmin = require('gulp-cssmin'),
   prefix = require('gulp-autoprefixer'),
@@ -7,6 +8,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
 	return gulp.src('sass/main.scss')
 	  .pipe(sass())
+	  .on('error', gutil.log)
 	  .pipe(prefix())
 	  .pipe(cssmin())
 	  .pipe(gulp.dest('styles'));

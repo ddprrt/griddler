@@ -1,4 +1,27 @@
 .masthead {
 	background-color: lighten($bgcolor, 15);
 	padding: 20px;
+	position: relative;
+}
+
+@media(min-width: $screen-sm) {
+	.headline-group {
+		font-size: 2em;
+		padding: 75px 40px;
+		margin-left: 330px;
+
+		h1 {
+			margin: 0;
+		}
+
+		h2 {
+			margin: 0;
+		}
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		margin-top: -100px;
+	}
 }
