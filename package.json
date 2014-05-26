@@ -1,0 +1,29 @@
+{
+  "name": "griddler",
+  "version": "0.0.0",
+  "description": "## Installation of Assets",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "~3.6.2",
+    "gulp-cssmin": "~0.1.5",
+    "gulp-autoprefixer": "~0.0.7",
+    "gulp-ruby-sass": "~0.4.3",
+    "gulp-sass": "~0.7.1"
+  },
+  "devDependencies": {
+    "gulp-connect": "~2.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddprrt/griddler"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddprrt/griddler/issues"
+  },
+  "homepage": "https://github.com/ddprrt/griddler"
+}
