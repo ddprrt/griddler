@@ -1,15 +1,15 @@
 // Global switches
 // --------------------------------------------------
 // Use silent classes instead of normal ones, to use with extend
-$use-silent:                   false !default;
-$use-pusher:                   true !default;
-$use-puller:                   true !default;
-$use-offset:                   true !default;
+$use-silent:                 false !default;
+$use-pusher:                 true !default;
+$use-puller:                 true !default;
+$use-offset:                 true !default;
 
-$use-xs:                       true !default;
-$use-sm:                       true !default;
-$use-md:                       true !default;
-$use-lg                        true !default;
+$use-xs:                     true !default;
+$use-sm:                     true !default;
+$use-md:                     true !default;
+$use-lg:                     true !default;
 
 // Media queries breakpoints
 // --------------------------------------------------
@@ -48,23 +48,23 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 // --------------------------------------------------
 
 // Number of columns in the grid system
-$grid-columns:              12 !default;
+$grid-columns:               12 !default;
 // Padding, to be divided by two and applied to the left and right of all columns
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:          30px !default;
 // Point at which the navbar stops collapsing
-$grid-float-breakpoint:     $screen-sm-min !default;
+$grid-float-breakpoint:      $screen-sm-min !default;
 
 // Container sizes
 // --------------------------------------------------
 
 // Small screen / tablet
-$container-tablet:             ((720px + $grid-gutter-width)) !default;
-$container-sm:                 $container-tablet !default;
+$container-tablet:           ((720px + $grid-gutter-width)) !default;
+$container-sm:               $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            ((940px + $grid-gutter-width)) !default;
-$container-md:                 $container-desktop !default;
+$container-desktop:          ((940px + $grid-gutter-width)) !default;
+$container-md:               $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
-$container-lg:                 $container-large-desktop !default;
+$container-large-desktop:    ((1140px + $grid-gutter-width)) !default;
+$container-lg:               $container-large-desktop !default;
