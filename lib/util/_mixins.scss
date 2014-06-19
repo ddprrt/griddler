@@ -19,7 +19,7 @@
   }
 }
 
-%clearfix {
+%griddler-clearfix {
   @include clearfix();
 }
 
@@ -34,7 +34,7 @@
   padding-right: ($grid-gutter-width / 2);
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  @extend %clearfix;
+  @extend %griddler-clearfix;
 }
 
 // Creates a wrapper for a series of columns
@@ -43,7 +43,7 @@
   margin-right: ($gutter / -2);
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  @extend %clearfix;
+  @extend %griddler-clearfix;
 }
 
 // Generate the extra small columns
