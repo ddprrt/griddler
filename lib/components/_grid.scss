@@ -39,8 +39,10 @@
 }
 
 // Common styles for small and large grid columns
-@include make-grid-columns();
-
+@if($use-xs) { @include make-grid-columns(xs); }
+@if($use-sm) { @include make-grid-columns(sm); }
+@if($use-md) { @include make-grid-columns(md); }
+@if($use-lg) { @include make-grid-columns(lg); }
 
 // Extra small grid
 //

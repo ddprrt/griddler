@@ -165,7 +165,7 @@
 // any value of `$grid-columns`.
 
 // [converter] Grid converted to use SASS cycles (LESS uses recursive nested mixin defs not supported by SASS)
-@mixin make-grid-columns() {
+@mixin make-grid-columns($class) {
   %grid-column {
     position: relative;
     // Prevent columns from collapsing when empty
@@ -180,12 +180,12 @@
   $list: '';
   $i: 1;
 
-  @if($use-silent) { $list: "%col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}"; }
-  @else { $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}"; }
+  @if($use-silent) { $list: "%col-#{$class}-#{$i}"; }
+  @else { $list: ".col-#{$class}-#{$i}"; }
 
   @for $i from 2 through $grid-columns {
-    @if($use-silent) { $list: "%col-xs-#{$i}, %col-sm-#{$i}, %col-md-#{$i}, %col-lg-#{$i}, #{$list}"; }
-    @else { $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, #{$list}"; }
+    @if($use-silent) { $list: "%col-#{$class}-#{$i}, #{$list}"; }
+    @else { $list: ".col-#{$class}-#{$i}, #{$list}"; }
   }
   #{$list} {
     @extend %grid-column;
