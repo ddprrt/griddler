@@ -1,6 +1,6 @@
 .masthead {
 	background-color: lighten($bgcolor, 15);
-	padding: 20px;
+	//padding: 20px;
 	position: relative;
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
 }
@@ -19,6 +19,7 @@
 		h2 {
 			margin: 0;
 			font-size: 1em;
+			line-height: 1.2em;
 		}
 	}
 

@@ -17,5 +17,16 @@ pre {
 	overflow: scroll;
 }
 
+dt {
+	font-weight: bold;
+}
+
+.demo-content {
+	background-color: lighten($bgcolor, 10);
+	height: 50px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
 @import "nav";
 @import "masthead";

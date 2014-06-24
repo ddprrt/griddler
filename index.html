@@ -32,9 +32,8 @@
 		<p>
 			Don't get us wrong: Bootstrap is great on many occassions and CSS developers surely can learn a lot! However, most of the time Bootstrap is used rather foolishly, dropping in tons of CSS in a website whilst needing just a few components, resulting sometimes in 98% of unused CSS code!
 		</p>
-
 		<p>
-			We found out that most of the designers are using Bootstrap just for the sake of the grid system. And we decided to extract that system for an easy-to-use drop-in replacement.
+			We found out that a lot of the designers are using Bootstrap just for the sake of the grid system. And we decided to extract that system for an easy-to-use drop-in replacement.
 		</p>
 
 		<p>
@@ -53,6 +52,90 @@
 <pre><code>bower install --save griddler
 </code></pre>
 
+		<h2>Using the grid</h2>
+
+		<p>
+			The grid originally defines 4 breakpoints:
+		</p>
+		<dl>
+			<dt>xs</dt>
+			<dd>small screens up to 768px of screen width</dd>
+			<dt>sm</dt>
+			<dd>small screens starting at 768px</dd>
+			<dt>md</dt>
+			<dd>medium screens starting at 992px</dd>
+			<dt>lg</dt>
+			<dd>large screens starting at 1200px</dd>
+		</dl>
+
+		<p>
+			For each of the breakpoints there is a set of twelve column-classes you can use. For example, an element with the class <code>.col-xs-6</code> will span 6 of 12 columns starting at zero. If you add <code>.col-sm-3</code>, it will span 3 of 12 columns starting at 768px.
+		</p>
+
+		<h2>Demo</h2>
+
+		<p>
+			In the first example we define column spans for all of the screen resolutions. This code
+		</p>
+
+<pre><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3 col-lg-2"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3 col-lg-2"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3 col-lg-2"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3 col-lg-2"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3 col-lg-2"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-6 col-md-3 col-lg-2"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+		<p>
+			results in
+		</p>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="demo-content">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="demo-content">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="demo-content">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="demo-content">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="demo-content">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+				<div class="demo-content">col-xs-12 col-sm-6 col-md-3 col-lg-2</div>
+			</div>
+		</div>
+		<p>
+			In the next example we intentionally leave out some breakpoint definitions. This code
+		</p>
+<pre><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-6 col-lg-3"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-6 col-lg-3"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-6 col-lg-3"&gt;...&lt;/div&gt;
+    &lt;div class="col-xs-6 col-lg-3"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+		<p>
+			results in:
+		</p>
+		<div class="row">
+			<div class="col-xs-6 col-lg-3"><div class="demo-content">col-xs-6 col-lg-3</div></div>
+			<div class="col-xs-6 col-lg-3"><div class="demo-content">col-xs-6 col-lg-3</div></div>
+			<div class="col-xs-6 col-lg-3"><div class="demo-content">col-xs-6 col-lg-3</div></div>
+			<div class="col-xs-6 col-lg-3"><div class="demo-content">col-xs-6 col-lg-3</div></div>
+		</div>
+
 		<h2>Optimizing your Output</h2>
 
 		<p>
@@ -65,7 +148,7 @@ $use-pusher: false;
 @import "../bower_components/griddler/lib/griddler";
 </code></pre>
 		<p>
-			It's also possible to override any of the known variables from Bootsrap. Refer to the <a href="./docs">for more information</a>
+			It's also possible to override any of the known variables from Bootsrap. Refer to the <a href="./docs">docs</a> for more information</a>
 		</p>
 	</article>
 </body>
