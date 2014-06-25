@@ -8,7 +8,7 @@
 //    that are clearfixed.
 // 2. The use of `table` rather than `block` is only necessary if using
 //    `:before` to contain the top-margins of child elements.
-@mixin clearfix() {
+@mixin clearfix {
   &:before,
   &:after {
     content: " "; /* 1 */
@@ -19,8 +19,14 @@
   }
 }
 
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 %griddler-clearfix {
-  @include clearfix();
+  @include clearfix;
 }
 
 // Grid System
@@ -32,8 +38,7 @@
   margin-left: auto;
   padding-left:  ($grid-gutter-width / 2);
   padding-right: ($grid-gutter-width / 2);
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing;
   @extend %griddler-clearfix;
 }
 
@@ -41,8 +46,7 @@
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing;
   @extend %griddler-clearfix;
 }
 
@@ -173,8 +177,7 @@
     // Inner gutter via padding
     padding-left:  ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    @include box-sizing;
   }
 
   $list: '';
