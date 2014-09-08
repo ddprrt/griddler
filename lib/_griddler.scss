@@ -9,5 +9,6 @@
 @import "components/grid";
 @import "components/utilities";
 
-
-/*# sourceMappingURL=griddler.css.map */
+@if($sourcemap) {
+/*# sourceMappingURL=griddler.css.map */	
+}
